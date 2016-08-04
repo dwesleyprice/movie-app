@@ -1,0 +1,45 @@
+$mainBgColor: #eee;
+$lineHeightParent: 30px;
+$lineHeightChildren: 20px;
+
+@import 'configs/variables';
+@import 'components/misc';
+@import 'header';
+@import 'layout/footer';
+
+body{
+	width: 100%;
+	margin:  0px;
+	background-color: $mainBgColor;
+	
+	.circle{
+		@include circle(100px, #123456, #654321);
+		height: 100px;
+		width: 100px;
+	}
+}
+
+#body{
+	.container{
+		width: $width;
+		overflow: hidden;
+		&.after-header{
+			padding-top: 40px;
+		}
+		.col{
+			width: getColumnWidth($width, $numColumns, $margin);
+			margin: auto $margin;
+			float: left;
+			@extend .base-font;
+
+		}
+
+		.caption{
+		   display: none;
+		}
+		img:hover .caption {
+		   display: block;
+		}
+
+	}
+}
