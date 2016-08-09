@@ -1,5 +1,5 @@
 // DOCUMENT READY FUNCTION
-function documentReady(){
+
 $(document).ready(function(){
 	
 		// console.log(nowPlayingData);
@@ -19,13 +19,13 @@ $(document).ready(function(){
 	
 
 		});
-	}); // END DOC READY FUNC
+	 // END DOC READY FUNC
 	
 		//loadCurrent();
-};
+
 
 //JSON LOAD CURRENT MOVIE FUNCTION
-function loadCurrent(){
+
 	
 		var npHTML = '';
 		for (var i = 0; i < nowPlayingData.results.length; i++) {
@@ -43,10 +43,10 @@ function loadCurrent(){
 		$('[data-toggle="popover"]').popover();
 
 		 //END LOAD CURRENT FUNCTION
-};
+
 
 //MOVIE FORM FUNCTION
-	function movieSearch(){
+
 			$('.movie-form').submit(function(){
 			event.preventDefault();
 
@@ -57,10 +57,10 @@ function loadCurrent(){
 			});
 
 		});
-};
+
 
 //MOVIE SEARCH DISPLAY FUNCTION
-	function searchDisplay(){
+
 					var npHTML = '';
 					for (var i = 0; i < nowPlayingClickedData.results.length; i++) {
 						npHTML += '<div class="col-sm-3">';
@@ -75,6 +75,5 @@ function loadCurrent(){
 					}
 					$('.poster-grid').html(npHTML);
 					$('[data-toggle="popover"]').popover();
-};
 
-documentReady(loadCurrent(movieSearch()));
+});
